@@ -7,7 +7,7 @@ Created on Mon Aug 26 20:08:06 2019
 #import subprocess, os, paramiko
 import functions as fn
 import pretraining, do
-import fucking_with_callbacks as fwc
+import adjusted_callbacks as fwc
 import cv2, os
 import numpy as np
 import time
@@ -382,7 +382,7 @@ def merge(plane, bcg, x_pos_r, y_pos_r,\
 		if y_plane_cen>= j*box_h  and  y_plane_cen< (j+1)*box_h:
 			b=j
 			
-	if (not no_ac_in) and (y_true[a,b,0]==1): # the detector would be responsible for 2 aircraft, fuck it and just ignore the new ac
+	if (not no_ac_in) and (y_true[a,b,0]==1): # the detector would be responsible for 2 aircraft, so just ignore the new ac
 		return bcg, y_true
 	else:
 		# Filling truth array            
@@ -1212,7 +1212,7 @@ import gc
 #from sys import getsizeof
 #from tqdm import tqdm
 import warnings
-import fucking_with_callbacks as fwc
+import adjusted_callbacks as fwc
 from keras import backend as K
 import keras
 import tensorflow as tf
@@ -1536,7 +1536,7 @@ import os
 from sys import getsizeof
 import warnings
 warnings.filterwarnings('ignore', '.*output shape of zoom.*')
-import fucking_with_callbacks as fwc
+import adjusted_callbacks as fwc
 import json, codecs
 
 

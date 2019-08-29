@@ -655,7 +655,7 @@ class DataGenerator(keras.utils.Sequence):
 			if y_plane_cen>= j*self.box_h  and  y_plane_cen< (j+1)*self.box_h:
 				b=j
 				
-		if (not no_ac_in) and (y_true[a,b,0]==1): # the detector would be responsible for 2 aircraft, fuck it and just ignore the new ac
+		if (not no_ac_in) and (y_true[a,b,0]==1): # the detector would be responsible for 2 aircraft, so just ignore the new ac
 			return bcg, y_true
 		else:
 			# Filling truth array            
